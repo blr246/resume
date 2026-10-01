@@ -19,14 +19,22 @@ const OUTPUT = path.join(__dirname, 'resume.pdf');
  */
 const PRINT_CSS = `
   :root { --lh-body: 1.34; }
-  .section { margin-bottom: 12px; }
-  .job { margin-bottom: 10px; }
-  .bullets li { margin-bottom: 3px; }
+  .section { margin-bottom: 14px; }
+  .job { margin-bottom: 11px; }
+  .bullets li { margin-bottom: 4px; }
 
-  /* Let a job span a page break so the Frame AI block stops forcing a
-     spill onto a third page. Headers are kept with their first bullet by
-     .job-head { break-after: avoid }, and bullets never split. */
-  .job { break-inside: auto; page-break-inside: auto; }
+  /* Page-1 break budget: Knewton must stay whole AND land on page 1, so the
+     gap before it has to end at <= 960px (the page-1 text height). These
+     three values give ~11px of headroom above Knewton -- the only spacing
+     above the break that is still below its screen value. Anything added
+     before Knewton (a bullet, a longer summary) eats into that headroom and
+     will push the PDF to 3 pages. Re-measure with build.js after edits. */
+  .masthead { margin-bottom: 12px; }
+  .section-title { margin-bottom: 8px; }
+  .job-head { margin-bottom: 4px; }
+
+  /* Jobs stay whole across page breaks (Knewton must not split); bullets
+     never split either. See README.md ("Pagination"). */
 `;
 
 /** Read the page count straight out of the PDF bytes. */
@@ -46,6 +54,11 @@ function countPages(buffer) {
   try {
     const page = await browser.newPage();
     await page.goto('file://' + INPUT, { waitUntil: 'networkidle0' });
+    // Wait for font loading before printing. With system fonts this resolves
+    // immediately, but if a web font is ever added, printing before its glyph
+    // map is ready can leave glyphs drawn with no character codes in the PDF
+    // text layer (invisible to ATS parsers -- see check.js).
+    await page.evaluateHandle('document.fonts.ready');
     await page.addStyleTag({ content: PRINT_CSS });
 
     const pdf = await page.pdf({

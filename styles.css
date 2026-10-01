@@ -7,6 +7,7 @@
   --ink-mute:   #6f6f6f;   /* dates, labels           */
   --rule:       #d8d8d8;   /* hairlines               */
   --rule-soft:  #e8e8e8;
+  --pipe:       #b5b5b5;   /* inline separators       */
 
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
           Arial, "Liberation Sans", sans-serif;
@@ -97,7 +98,7 @@ h1, h2, h3 {
 
 .contact .sep {
   margin: 0 8px;
-  color: #b5b5b5;
+  color: var(--pipe);
 }
 
 .contact .metro {
@@ -151,6 +152,12 @@ h1, h2, h3 {
   color: var(--ink-mute);
 }
 
+.pipe {
+  color: var(--pipe);
+  /* symmetric so the pipe sits centered in the gap on both sides */
+  margin: 0 2px;
+}
+
 .job-title {
   font-size: var(--fs-body);
   color: var(--ink-soft);
@@ -202,32 +209,38 @@ h1, h2, h3 {
 }
 
 /* ---------------------------------------------------------------
-   Technical expertise (label / description pairs)
+   Technical expertise: taxonomy style, category then members
    --------------------------------------------------------------- */
 .expertise { margin: 0; }
 
 .expertise-row {
-  display: flex;
-  gap: 14px;
-  padding: 5px 0;
-  border-bottom: 1px solid var(--rule-soft);
+  display: block;
+  padding: 5px 0 5px 14px;
+  text-indent: -14px;      /* first line hangs left, wraps indent */
 }
 
 .expertise-row:first-child { padding-top: 0; }
-.expertise-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.expertise-row:last-child { padding-bottom: 0; }
 
 .expertise-row dt {
-  flex: 0 0 2.15in;
-  font-size: 9.2pt;
+  display: inline;
+  font-size: var(--fs-body);
   font-weight: 600;
-  line-height: 1.35;
   color: var(--ink);
 }
 
+/* The arrow is real text in the markup (not CSS generated content) so that
+   PDF/HTML text extractors and screen readers see it. */
+.expertise-row .arrow {
+  color: var(--pipe);
+  font-weight: 400;
+}
+
 .expertise-row dd {
+  display: inline;
   margin: 0;
-  font-size: 8.8pt;
-  line-height: 1.38;
+  font-size: var(--fs-body);
+  line-height: 1.42;
   color: var(--ink-soft);
 }
 
@@ -302,6 +315,12 @@ h1, h2, h3 {
   .entry-head {
     break-after: avoid;
     page-break-after: avoid;
+  }
+
+  /* Add this class to any section to start it on a fresh page */
+  .page-break {
+    break-before: page;
+    page-break-before: always;
   }
 
   /* Keep jobs intact across page breaks; bullets never split */

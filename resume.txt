@@ -2,33 +2,31 @@ Brandon Reiss
 Summit, NJ (NYC metro) | brandonreiss.com | LinkedIn
 
 Summary
-Applied AI systems architect and former founder specializing in production ML platforms that handle real-world scale, latency, and cost constraints. Co-founded Frame AI and led core architecture from inception through enterprise scaling and acquisition by HubSpot. Currently advising company-wide AI strategy while architecting HubSpot’s unstructured data intelligence layer. Strategic advisor to executive leadership with a proven track record of operating autonomously and translating ambiguous R&D bets into durable production systems.
+Applied AI systems architect and former founder specializing in production ML platforms that handle real-world scale, latency, and cost constraints. Proven track record of operating autonomously to translate ambiguous R&D bets into durable production systems, architecting high-throughput unstructured data intelligence layers, and advising executive leadership on company-wide AI strategy.
 
 Experience
 HubSpot | Remote
 Staff Software Engineer | Jan 2025 – Present
 Architect and lead engineering for HubSpot’s unstructured data signal extraction and intelligence layer, serving millions of monthly in-app CRM experiences (deal execution, meeting prep, account review).
-Integrated unstructured data context into flagship AI assistant, setting evaluation standards from experimentation to post-release impact; achieved >20% daily assistant traffic penetration with measurable lifts in CSAT, task completion, and model quality benchmarks.
+Integrated unstructured context into flagship AI assistant, setting evaluation standards from experimentation to release; achieved >20% daily traffic penetration with measurable lifts in CSAT and model quality benchmarks.
 Engineered unstructured content normalization and noise-filtering pipelines, significantly cutting inference token waste, reducing hallucinations, and establishing sustainable unit economics for LLM features.
 Advise cross-organizational teams on company-wide AI platform standards, focusing on model evaluation methodology, inference cost optimization, and low-latency architectural reliability.
 
 Frame AI | New York, NY
 Co-Founder / Principal Engineer / Director | Feb 2016 – Jan 2025 (Acquired by HubSpot)
-Co-founded and served as principal architect from inception through acquisition by HubSpot, scaling an applied AI platform that transformed unstructured conversational data (support tickets, transcripts, emails) into proactive, actionable business signals.
+Co-founded and served as principal architect from inception through acquisition, scaling an applied AI platform that transformed unstructured conversational data into proactive, actionable business signals.
 Architected multi-stage ingestion, extraction, and synthesis pipelines processing continuous streams of customer interactions under demanding end-to-end SLAs.
-Implemented task prioritization and deduplication strategies across heterogeneous computational workloads to optimize compute efficiency and maintain responsiveness.
-Designed multi-tenant fault isolation across service fleet, leveraging exponential backoffs and concurrency throttles to prevent traffic spikes and error cascades from causing correlated system degradation.
+Implemented task prioritization and deduplication strategies across heterogeneous computational workloads and multi-tenant fault isolation across service fleet.
 Synthesized classical NLP and modern ML into configurable, cost-efficient production pipelines—unifying rules-based filtering, dependency parsing, sentence encoders, and LLMs into cohesive intelligence systems.
-Engineered storage backends combining relational databases (PostgreSQL) for transactional state with columnar and distributed object/NoSQL storage (ClickHouse) for high-volume unstructured analytical workloads.
+Engineered storage backends combining relational databases (PostgreSQL) for transactional state with columnar and distributed object/NoSQL storage (ClickHouse) for high-volume analytical workloads.
 As Head of Security, established comprehensive security, compliance, and risk management programs; achieved and maintained SOC 2 Type II certification for 5 consecutive years with zero notable exceptions, delivered HIPAA compliance, and cleared Fortune 100 security audits.
 Partnered with research scientists, platform engineers, and enterprise partner teams to deploy resilient conversational intelligence solutions integrated with live products (e.g., Twilio Flex).
 
 Knewton | New York, NY
 Software Engineering Manager / Senior Engineer | Sep 2012 – Dec 2015
-Selected by senior leadership to lead some of the company’s premier technical talent, bridging core applied R&D with production engineering across two teams in the Adaptive Learning division.
-Directed the architecture and operational delivery of foundational statistical inference engines, large-scale recommendation systems, and automated pedagogy QA evaluation tools.
-Maintained hands-on leadership through architecture design, code review, and building monitoring frameworks to track production statistical model drift and performance.
-Built core statistical modeling pipelines and distributed infrastructure powering the adaptive learning platform prior to transitioning into management.
+Selected by senior leadership to lead premier engineering talent, bridging core applied R&D with production engineering across two teams in the Adaptive Learning division.
+Directed the architecture and operational delivery of statistical inference engines, large-scale recommendation systems, and automated pedagogy QA evaluation tools.
+Built core statistical modeling pipelines and distributed infrastructure powering the adaptive learning platform; measured statistical model drift and performance.
 
 Organic Motion | New York, NY
 Software Engineer / Systems Intern | Jan 2007 – Sep 2012
@@ -37,18 +35,19 @@ Built camera synchronization and distributed acquisition software for a 40-camer
 Designed and produced embedded hardware and firmware, including custom microcontroller PCBs mounted with rings of high-power near-IR LEDs and camera shutter sync routines.
 
 Technical Expertise & Core Competencies
-Agentic AI & Compound Systems: Token Budgeting & Dynamic Context Window Management, Tool & Skill Architectures, Agent Task Performance Evaluation & Benchmarking, Proactive & On-Demand Data Retrieval, Contextual Summarization & Grounding (RAG).
-Applied AI / ML & Statistical Inference: Large-Scale Recommender & Ranking Systems, Multi-Class Text Classification, Generalized Linear Models (GLMs), Signal Extraction & Feature Engineering, Bi-Encoders, Sentence Encoders, Syntactic/Dependency Parsing, Classical NLP & Rule-Based Heuristics, GPU Computer Vision.
-Distributed Systems & Concurrency: Low-Latency Event-Driven Architectures, Multi-Tenant Resiliency (Blast-Radius Isolation, Anti-Correlated Failure Design), Priority-Tiered Processing, Fault-Tolerant Distributed Queues & Worker Architectures, Asynchronous / Parallel / Concurrent Execution Patterns, Exponential Backoff & Fault Recovery, CPU & Memory Profiling.
-Data Infrastructure & Storage Internals: Relational Databases (PostgreSQL & InnoDB Internals, Concurrency, Lock Mechanics, Indexing), Columnar OLAP Datastores, Distributed Storage (HBase, S3).
+Agentic AI & Compound Systems: Token Budgeting & Context Window Management, Tool & Skill Architectures, Agent Task Performance Evaluation & Benchmarking, Task Aligned Data Retrieval, RAG.
+Applied AI / ML & Statistical Inference: Recommender & Ranking Systems, Multi-Class Text Classification, Generalized Linear Models (GLMs), Signal Extraction & Feature Engineering, Sentence Encoders, Clustering, Syntactic/Dependency Parsing, Classical NLP & Rule-Based Heuristics.
+Distributed Systems & Concurrency: Low-Latency Event-Driven Architectures, Multi-Tenant Resiliency (Blast-Radius Isolation, Anti-Correlated Failure Design), Priority-Tiered Processing, Fault-Tolerant Distributed Queues & Worker Architectures, Asynchronous / Parallel / Concurrent Execution Patterns, CPU & Memory Profiling.
+Data Infrastructure & Storage: Relational Databases (PostgreSQL & InnoDB Internals, Concurrency, Lock Mechanics, Indexing), Columnar OLAP Datastores, Distributed Storage (HBase, S3).
 Security, Compliance & Governance: SOC 2 Type II Program Architecture & Audit Defense, HIPAA Compliance, Enterprise Security Reviews, Risk Management & Data Governance, Application Security Testing.
 Languages & Technical Tooling: Python, C++, Java, SQL, Bash / Linux CLI Tools; broad polyglot proficiency across modern software stacks; agentic coding harnesses & AI-assisted development workflows.
 
 Early Career & Applied Research
-Undergraduate Research Assistant | Rensselaer Polytechnic Institute (RPI) (2004 – 2005): Co-authored peer-reviewed research in Applied and Environmental Microbiology (April 2006, 72: 2460–2470) on isolating PCB-dechlorinating bacterial cultures using PCR, DNA sequence analysis, and gas chromatography.
-Engineering Intern | BAE Systems (2002 – 2004): First high-school intern admitted in company history; designed a $300k RF-absorbent antenna test facility and conducted experimental classification of RF signal polarization using early neural networks.
+Undergraduate Research Assistant | Rensselaer Polytechnic Institute (RPI): Co-authored peer-reviewed research in Applied and Environmental Microbiology (April 2006, 72: 2460–2470) on isolating PCB-dechlorinating bacterial cultures using PCR, DNA sequence analysis, and gas chromatography.
+Engineering Intern | BAE Systems: First high-school intern admitted in company history; designed a $300k RF-absorbent antenna test facility and conducted experimental classification of RF signal polarization using neural networks.
 
 Education
 M.S. in Computer Science | New York University, Courant Institute of Mathematical Sciences
 Recipient, Courant Hedwig Kurzbart Master's Fellowship (awarded annually for academic excellence)
-B.A. in Computer Science and Mathematics, Minor in Metropolitan Studies | New York University, College of Arts and Science
+B.A. in Computer Science and Mathematics | New York University, College of Arts and Science
+Minor in Metropolitan Studies

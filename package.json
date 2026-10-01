@@ -5,9 +5,11 @@
   "description": "HTML/CSS resume with Puppeteer PDF export",
   "scripts": {
     "build": "node build.js",
+    "check": "node check.js",
     "watch": "npx nodemon --watch index.html --watch styles.css --exec 'node build.js'"
   },
   "devDependencies": {
+    "pdf-parse": "^2.4.5",
     "puppeteer": "^23.11.1"
   }
 }
