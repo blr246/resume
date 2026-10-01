@@ -1,0 +1,319 @@
+/* ---------------------------------------------------------------
+   Design tokens
+   --------------------------------------------------------------- */
+:root {
+  --ink:        #1c1c1c;   /* primary text            */
+  --ink-soft:   #4a4a4a;   /* secondary text          */
+  --ink-mute:   #6f6f6f;   /* dates, labels           */
+  --rule:       #d8d8d8;   /* hairlines               */
+  --rule-soft:  #e8e8e8;
+
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+          Arial, "Liberation Sans", sans-serif;
+
+  --page-w:    8.5in;
+  --page-h:    11in;
+  --page-pad:  0.5in;
+
+  --fs-name:   24pt;
+  --fs-h2:     11pt;
+  --fs-h3:     12pt;
+  --fs-body:   10pt;
+  --fs-small:  9.2pt;
+
+  --lh-body:   1.42;
+}
+
+/* ---------------------------------------------------------------
+   Reset / base
+   --------------------------------------------------------------- */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+p { margin: 0; }
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------
+   Page container (mirrors the printed page on screen)
+   --------------------------------------------------------------- */
+.page {
+  width: var(--page-w);
+  max-width: 100%;
+  margin: 24px auto;
+  padding: var(--page-pad);
+  background: #fff;
+}
+
+/* ---------------------------------------------------------------
+   Masthead
+   --------------------------------------------------------------- */
+.masthead {
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 16px;
+}
+
+.masthead h1 {
+  font-size: var(--fs-name);
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.contact {
+  margin-top: 7px;
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+
+.contact > * { vertical-align: middle; }
+
+.contact a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+.contact a:hover { color: var(--ink); }
+
+.contact .sep {
+  margin: 0 8px;
+  color: #b5b5b5;
+}
+
+.contact .metro {
+  color: var(--ink-mute);
+}
+
+
+
+/* ---------------------------------------------------------------
+   Sections
+   --------------------------------------------------------------- */
+.section { margin-bottom: 16px; }
+
+.section-title {
+  font-size: var(--fs-h2);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.summary {
+  color: var(--ink-soft);
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* ---------------------------------------------------------------
+   Jobs
+   --------------------------------------------------------------- */
+.job { margin-bottom: 13px; }
+.job:last-child { margin-bottom: 0; }
+
+.job-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 5px;
+}
+
+.job-role h3 {
+  font-size: var(--fs-h3);
+  line-height: 1.25;
+}
+
+.job-role .location {
+  font-weight: 400;
+  color: var(--ink-mute);
+}
+
+.job-title {
+  font-size: var(--fs-body);
+  color: var(--ink-soft);
+  margin-top: 1px;
+}
+
+.job-dates {
+  flex: 0 0 auto;
+  font-size: var(--fs-small);
+  color: var(--ink-mute);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.job-dates .note {
+  display: inline-block;
+  margin-left: 4px;
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------------
+   Bullet lists
+   --------------------------------------------------------------- */
+.bullets {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 4px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.bullets li:last-child { margin-bottom: 0; }
+
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.58em;
+  width: 4px;
+  height: 4px;
+  background: var(--ink-mute);
+  border-radius: 50%;
+}
+
+/* ---------------------------------------------------------------
+   Technical expertise (label / description pairs)
+   --------------------------------------------------------------- */
+.expertise { margin: 0; }
+
+.expertise-row {
+  display: flex;
+  gap: 14px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.expertise-row:first-child { padding-top: 0; }
+.expertise-row:last-child { border-bottom: 0; padding-bottom: 0; }
+
+.expertise-row dt {
+  flex: 0 0 2.15in;
+  font-size: 9.2pt;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.expertise-row dd {
+  margin: 0;
+  font-size: 8.8pt;
+  line-height: 1.38;
+  color: var(--ink-soft);
+}
+
+/* ---------------------------------------------------------------
+   Compact entries (early career, education)
+   --------------------------------------------------------------- */
+.entry { margin-bottom: 8px; }
+.entry:last-child { margin-bottom: 0; }
+
+.entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.entry-role {
+  font-weight: 600;
+}
+
+.entry-meta {
+  flex: 0 0 auto;
+  font-size: var(--fs-small);
+  color: var(--ink-mute);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.entry-body {
+  margin-top: 2px;
+  color: var(--ink-soft);
+}
+
+/* ---------------------------------------------------------------
+   Screen: show a page edge when the viewport is tall enough
+   --------------------------------------------------------------- */
+@media screen {
+  body { background: #f2f2f2; }
+  .page {
+    min-height: var(--page-h);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
+  }
+}
+
+/* ---------------------------------------------------------------
+   Print / PDF
+   --------------------------------------------------------------- */
+@page {
+  size: Letter;
+  margin: var(--page-pad);
+}
+
+@media print {
+  html, body { background: #fff; }
+
+  /* Keep links looking like plain text in the PDF */
+  a { color: inherit; text-decoration: none; }
+  .contact a { border-bottom: 0; }
+
+  .page {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    box-shadow: none;
+  }
+
+  /* Keep headings glued to their content */
+  .section-title,
+  .job-head,
+  .entry-head {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Keep jobs intact across page breaks; bullets never split */
+  .job,
+  .entry,
+  .expertise-row {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .bullets li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

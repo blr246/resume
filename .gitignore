@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.npm
+.pnp
+.pnp.js
+
+# Build / scratch output
+tmp/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# NOTE: resume.pdf is intentionally tracked. It is the deliverable, so the
+# repository always has a current copy even for readers who don't run the build.
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.code-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Coverage / caches
+coverage/
+.cache/
+.parcel-cache/
+.eslintcache
