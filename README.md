@@ -25,6 +25,7 @@ Node comes from nvm (`~/.nvm`), which is on PATH.
 | `check.js` | ATS text-layer check. Run after every build. |
 | `resume.pdf` | Generated output. Never edit by hand. |
 | `README.md` | This file. |
+| `AGENTS.md` | Instructions and constraints for AI agents working in this repo. |
 | `.gitignore` | Ignores `tmp/`, `node_modules/`, `.DS_Store`; tracks `resume.pdf`. |
 | `tmp/` | Scratch space for test renders, screenshots, and layout variants. Safe to delete; `tmp/make-compare.js` rebuilds the side-by-side set. |
 
