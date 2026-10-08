@@ -138,6 +138,10 @@ h1, h2, h3 {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  /* On a full-width page the dates sit to the right of the title. When the
+     page is too narrow for both, the dates move to a line of their own
+     instead of running past the right edge. Nothing wraps on paper. */
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 5px;
 }
@@ -165,11 +169,14 @@ h1, h2, h3 {
 }
 
 .job-dates {
-  flex: 0 0 auto;
+  /* Allowed to shrink and to wrap. flex:0 0 auto together with
+     white-space:nowrap kept this box at its content width no matter how narrow
+     the page was, which is what pushed the widest date range past the right
+     edge of a phone. */
+  flex: 0 1 auto;
   font-size: var(--fs-small);
   color: var(--ink-mute);
   letter-spacing: 0.02em;
-  white-space: nowrap;
 }
 
 .job-dates .note {
@@ -254,6 +261,10 @@ h1, h2, h3 {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  /* The affiliation is meant to sit opposite the degree or the role. A long
+     one ("New York University, Courant Institute of Mathematical Sciences")
+     cannot fit beside it on a narrow page, so it takes a line of its own. */
+  flex-wrap: wrap;
   gap: 16px;
 }
 
@@ -262,11 +273,14 @@ h1, h2, h3 {
 }
 
 .entry-meta {
-  flex: 0 0 auto;
+  /* Same as .job-dates: flex:0 0 auto with white-space:nowrap held the
+     affiliation at its full content width, and the longest one ("New York
+     University, Courant Institute of Mathematical Sciences") is wider than a
+     phone. */
+  flex: 0 1 auto;
   font-size: var(--fs-small);
   color: var(--ink-mute);
   text-align: right;
-  white-space: nowrap;
 }
 
 .entry-body {

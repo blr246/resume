@@ -23,15 +23,15 @@ const PRINT_CSS = `
   .job { margin-bottom: 11px; }
   .bullets li { margin-bottom: 4px; }
 
-  /* Page-1 break budget: Knewton must stay whole AND land on page 1, so the
-     gap before it has to end at <= 960px (the page-1 text height). These
-     three values give ~11px of headroom above Knewton -- the only spacing
-     above the break that is still below its screen value. Anything added
-     before Knewton (a bullet, a longer summary) eats into that headroom and
-     will push the PDF to 3 pages. Re-measure with build.js after edits. */
-  .masthead { margin-bottom: 12px; }
-  .section-title { margin-bottom: 8px; }
-  .job-head { margin-bottom: 4px; }
+  /* Page-1 break budget: Knewton must stay whole AND land on page 1, so its
+     block has to end at <= 960px (the page-1 text height). These three
+     values are the spacing above Knewton that sits below its screen value;
+     together they leave ~4px of headroom. Anything added before Knewton (a
+     bullet, a longer summary) eats into that and pushes the PDF to 3 pages,
+     or leaves a blank strip at the bottom of page 1. Re-measure after edits. */
+  .masthead { margin-bottom: 10px; }
+  .section-title { margin-bottom: 7px; }
+  .job-head { margin-bottom: 3px; }
 
   /* Jobs stay whole across page breaks (Knewton must not split); bullets
      never split either. See README.md ("Pagination"). */
