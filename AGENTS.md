@@ -36,10 +36,17 @@ when the page looks fine on screen.
    counts against that budget; spacing *below* Knewton does not move the
    break, it only adds total height.
 
-   **Headroom is ~4px.** Add a bullet or a longer summary above Knewton and
-   the build reports 3 pages — or worse, silently leaves a blank strip at the
-   bottom of page 1. Reclaim space from `.masthead`, `.section-title`,
-   `.job-head`, or the gaps above Knewton. Never override
+   **Current state: Knewton runs 72px past that budget**, so it moves whole to
+   the top of page 2 and page 1 ends with a 57px strip after Frame AI. This is
+   the accepted layout. Clearing the budget is binary — reclaiming part of the
+   72px makes the strip *larger*, so either reclaim it in full or leave it
+   alone. Spacing alone cannot reach 72px without losing the intended
+   airiness.
+
+   **Both pages together hold 1920px and currently use ~1887px**, so ~33px of
+   slack remains. Add more than that anywhere and the build reports 3 pages.
+   Reclaim space from `.masthead`, `.section-title`, `.job-head`, or the gaps
+   above Knewton, or trim copy across a line boundary. Never override
    `.job { break-inside: avoid }` in `PRINT_CSS`.
 
 2. **`resume.txt` is the source of truth for all copy**, and it stays in sync
@@ -93,7 +100,7 @@ type stays 10pt in both — take space from gaps and leading, never from type.
    pipes, and every entity.
 5. Re-verify fidelity against `resume.txt` (both directions).
 
-If the build reports 3 pages, you added space above Knewton. See constraint 1.
+If the build reports 3 pages, total height went past 1920px. See constraint 1.
 
 ## Numbers worth knowing
 

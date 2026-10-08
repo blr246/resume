@@ -82,7 +82,9 @@ Both render body text at 10pt. Change print density in `PRINT_CSS` in
 ## Pagination
 
 Target: **2 pages, with no job split across the break.** The current
-configuration meets it.
+configuration meets it: page 1 fills to 903px, Knewton moves whole to the top
+of page 2, and the 57px strip left at the bottom of page 1 is the accepted
+result.
 
 Print settings that hold at 2 pages:
 
@@ -91,21 +93,29 @@ Print settings that hold at 2 pages:
 .section { margin-bottom: 14px; }
 .job { margin-bottom: 11px; }
 .bullets li { margin-bottom: 4px; }
-.masthead { margin-bottom: 12px; }
-.section-title { margin-bottom: 8px; }
-.job-head { margin-bottom: 4px; }
+.masthead { margin-bottom: 10px; }
+.section-title { margin-bottom: 7px; }
+.job-head { margin-bottom: 3px; }
 ```
 
 Notes on what drives the result:
 
 - **The page-1 break budget is the whole game.** Page 1 holds 960px of text.
-  Knewton must stay whole *and* end at or before 960px, so the break falls in
-  the gap after it. Every pixel of spacing between the top of the document and
-  the bottom of Knewton counts against that budget — spacing *below* Knewton
-  does not move the break, it only adds total height.
-- **Headroom is ~11px.** Add a bullet or a longer summary above Knewton and
-  the PDF goes to 3 pages. If that happens, take the space back from
-  `.masthead`, `.section-title`, `.job-head`, or the gaps above it.
+  Knewton must stay whole: if its block ends at or before 960px the break falls
+  in the gap after it, and if it runs past, Knewton moves whole to page 2 and
+  leaves a blank strip on page 1. Every pixel of spacing between the top of the
+  document and the bottom of Knewton counts against that budget — spacing
+  *below* Knewton does not move the break, it only adds total height.
+- **Clearing the budget is binary.** Knewton currently runs 72px past it, so
+  the break sits before Knewton rather than after it. Reclaiming part of that
+  72px makes the strip on page 1 *larger*, not smaller — either reclaim it in
+  full or leave the layout alone. Cutting spacing below the values above was
+  tried and priced; it does not reach 72px without losing the intended
+  airiness.
+- **Two pages still has ~33px of slack.** Add more than that anywhere in the
+  document and the PDF goes to 3 pages. If that happens, take the space back
+  from `.masthead`, `.section-title`, `.job-head`, or the gaps above Knewton —
+  or trim copy across a line boundary.
 - **Jobs are never split.** `.job { break-inside: avoid }` in `styles.css` is
   what keeps Knewton intact; do not override it in `PRINT_CSS`.
 - **Spend the margin before the type.** 0.5in margins over a 7.5in measure are

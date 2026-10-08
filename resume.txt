@@ -7,32 +7,31 @@ Applied AI systems architect and former founder specializing in production ML pl
 Experience
 HubSpot | Remote
 Staff Software Engineer | Jan 2025 – Present
-Architect and lead engineering for HubSpot’s unstructured data signal extraction and intelligence layer, serving millions of monthly in-app CRM experiences (deal execution, meeting prep, account review).
-Integrated unstructured context into flagship AI assistant, setting evaluation standards from experimentation to release; achieved >20% daily traffic penetration with measurable lifts in CSAT and model quality benchmarks.
-Engineered unstructured content normalization and noise-filtering pipelines, significantly cutting inference token waste, reducing hallucinations, and establishing sustainable unit economics for LLM features.
-Advise cross-organizational teams on company-wide AI platform standards, focusing on model evaluation methodology, inference cost optimization, and low-latency architectural reliability.
+Architect and top contributor for HubSpot’s unstructured data intelligence layer processing ~200B tokens per day and ~30M globally distributed record update triggers (>600 RPS peak) across 60M orchestrated extraction tasks, while maintaining p99 end-to-end latency under 4 minutes and unit costs below $0.001 per record.
+Integrated unstructured context into flagship AI assistant, setting evaluation standards from experimentation to release; achieved >30% daily traffic penetration with measurable lifts in CSAT and model quality benchmarks.
+Designed company-wide unstructured content normalization and noise-filtering standards, significantly cutting inference token waste, reducing hallucinations, and establishing sustainable unit economics for LLM features.
+Aligned unstructured intelligence platform engineering with executive leadership’s top strategic priority of leveraging AI context to deliver measurable customer outcomes by influencing roadmap priorities and developing new AI context outcome measurement methods.
+Influenced staff+ engineers to invest in agentic AI performance optimization using replay-driven evaluation frameworks; drove cross-team coaching initiatives, including accelerating stalled product launches and connecting high-impact knowledge transfer from Customer Success to adjacent MLE teams.
 
 Frame AI | New York, NY
 Co-Founder / Principal Engineer / Director | Feb 2016 – Jan 2025 (Acquired by HubSpot)
-Co-founded and served as principal architect from inception through acquisition, scaling an applied AI platform that transformed unstructured conversational data into proactive, actionable business signals.
+Co-founded and served as principal architect from inception to acquisition by HubSpot, scaling an applied AI platform over 4 orders of magnitude to handle millions of monthly conversations powering dozens of process automations at a dozen mid-market and enterprise clients.
+Provided technical leadership to lean engineering organization of 6 across full-stack, data engineering, R&D, and forward-deployed functions, delivering major yearly product releases, weekly customizations, and a major white-label product integration with Twilio Flex.
 Architected multi-stage ingestion, extraction, and synthesis pipelines processing continuous streams of customer interactions under demanding end-to-end SLAs.
 Implemented task prioritization and deduplication strategies across heterogeneous computational workloads and multi-tenant fault isolation across service fleet.
 Synthesized classical NLP and modern ML into configurable, cost-efficient production pipelines—unifying rules-based filtering, dependency parsing, sentence encoders, and LLMs into cohesive intelligence systems.
 Engineered storage backends combining relational databases (PostgreSQL) for transactional state with columnar and distributed object/NoSQL storage (ClickHouse) for high-volume analytical workloads.
-As Head of Security, established comprehensive security, compliance, and risk management programs; achieved and maintained SOC 2 Type II certification for 5 consecutive years with zero notable exceptions, delivered HIPAA compliance, and cleared Fortune 100 security audits.
-Partnered with research scientists, platform engineers, and enterprise partner teams to deploy resilient conversational intelligence solutions integrated with live products (e.g., Twilio Flex).
+As Head of Security, successfully unlocked Fortune 100 go-to-market strategy by establishing comprehensive security, compliance, and risk management programs; achieved and maintained SOC 2 Type II certification for 5 consecutive years with zero notable exceptions, delivered HIPAA compliance, and cleared security audits.
 
 Knewton | New York, NY
 Software Engineering Manager / Senior Engineer | Sep 2012 – Dec 2015
-Selected by senior leadership to lead premier engineering talent, bridging core applied R&D with production engineering across two teams in the Adaptive Learning division.
-Directed the architecture and operational delivery of statistical inference engines, large-scale recommendation systems, and automated pedagogy QA evaluation tools.
-Built core statistical modeling pipelines and distributed infrastructure powering the adaptive learning platform; measured statistical model drift and performance.
+Selected by senior leadership to lead a high-performing team of 8 engineers within the Adaptive Learning division, bridging core R&D with production engineering and setting technical execution standards.
+Built low-latency (p99 < 2 minutes) statistical inference engines and recommendation systems serving millions of students globally.
 
 Organic Motion | New York, NY
-Software Engineer / Systems Intern | Jan 2007 – Sep 2012
-Developed low-latency computer vision algorithms and GPU compute kernels for markerless, real-time 3D human motion tracking and clinical gait analysis.
-Built camera synchronization and distributed acquisition software for a 40-camera research array and an SLR-based 3D surface scanner.
-Designed and produced embedded hardware and firmware, including custom microcontroller PCBs mounted with rings of high-power near-IR LEDs and camera shutter sync routines.
+Software Engineer | Jan 2007 – Sep 2012
+Developed low-latency computer vision algorithms and local network distributed systems for markerless motion capture and clinical gait analysis.
+Self-taught hardware and firmware development to produce custom PCBs mounted with rings of near-IR LEDs and programmable microcontroller.
 
 Technical Expertise & Core Competencies
 Agentic AI & Compound Systems: Token Budgeting & Context Window Management, Tool & Skill Architectures, Agent Task Performance Evaluation & Benchmarking, Task Aligned Data Retrieval, RAG.
@@ -44,7 +43,7 @@ Languages & Technical Tooling: Python, C++, Java, SQL, Bash / Linux CLI Tools; b
 
 Early Career & Applied Research
 Undergraduate Research Assistant | Rensselaer Polytechnic Institute (RPI): Co-authored peer-reviewed research in Applied and Environmental Microbiology (April 2006, 72: 2460–2470) on isolating PCB-dechlorinating bacterial cultures using PCR, DNA sequence analysis, and gas chromatography.
-Engineering Intern | BAE Systems: First high-school intern admitted in company history; designed a $300k RF-absorbent antenna test facility and conducted experimental classification of RF signal polarization using neural networks.
+Engineering Intern | BAE Systems: First high-school intern admitted in company history; designed a $300K RF-absorbent antenna test facility and conducted experimental classification of RF signal polarization using neural networks.
 
 Education
 M.S. in Computer Science | New York University, Courant Institute of Mathematical Sciences
